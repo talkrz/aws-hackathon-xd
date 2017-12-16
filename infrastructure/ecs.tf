@@ -113,3 +113,9 @@ output "ecs-cluster-id" {
 output "ecs-service-role-id" {
   value = "${aws_iam_role.ecs-service-role.id}"
 }
+
+
+### REPOSITORY ###
+resource "aws_ecr_repository" "hackathon-ecs-repo" {
+  name = "hackathon-ecs-repo"
+}

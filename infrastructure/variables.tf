@@ -29,3 +29,7 @@ variable "subnet-private2_cidr" {
 variable "subnet-private3_cidr" {
     default = "10.0.6.0/24"
 }
+
+variable "key_file" {
+    default = "keys/example.pub"
+}

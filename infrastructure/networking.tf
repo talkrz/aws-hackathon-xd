@@ -12,7 +12,7 @@ resource "aws_subnet" "hackathon_public_a" {
   map_public_ip_on_launch = true
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_public_a"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_subnet" "hackathon_public_b" {
   map_public_ip_on_launch = true
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_public_b"
   }
 }
 
@@ -32,7 +32,7 @@ resource "aws_subnet" "hackathon_public_c" {
   map_public_ip_on_launch = true
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_public_c"
   }
 }
 
@@ -41,7 +41,7 @@ resource "aws_subnet" "hackathon_private_a" {
   cidr_block = "10.0.4.0/24"
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_private_a"
   }
 }
 
@@ -50,7 +50,7 @@ resource "aws_subnet" "hackathon_private_b" {
   cidr_block = "10.0.5.0/24"
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_private_b"
   }
 }
 
@@ -59,6 +59,6 @@ resource "aws_subnet" "hackathon_private_c" {
   cidr_block = "10.0.6.0/24"
 
   tags {
-    Name = "hackathon"
+    Name = "hackathon_private_c"
   }
 }

@@ -16,12 +16,6 @@ resource "aws_iam_role_policy" "ecs-instance-policy" {
   policy = "${file("policies/ecs-instance-role-policy.json")}"
 }
 
-resource "aws_iam_role_policy" "ecs-instance-s3-creds-policy" {
-  name   = "${format("%s-%s", "ecs-instance-s3-creds-policy", var.env)}"
-  role   = "${aws_iam_role.ecs-instance-role.id}"
-  policy = "${data.template_file.ecs-instance-s3-creds-policy.rendered}"
-}
-
 resource "aws_iam_role" "ecs-instance-role" {
   name               = "${format("%s-%s", "ecs-instance-role", var.env)}"
   assume_role_policy = "${file("policies/ecs-instance-role.json")}"
